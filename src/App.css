@@ -1,0 +1,125 @@
+/* استایل برای نوار ناوبری (navbar) */
+.custom-navbar {
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(10px);    
+  -webkit-backdrop-filter: blur(10px); 
+  border: 2px solid rgba(255, 255, 255, 0.7);          
+  padding: 0.5rem 1.5rem;  
+  z-index: 1030;      
+}
+
+/* لینک‌های navbar */
+.nav .custom-navbar-link {
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+/* استایل آیکن‌های شبکه اجتماعی */
+.social-icon {
+  background-color: #d0d0d0;
+}
+
+/* هاور روی آیکن شبکه اجتماعی */
+.social-icon:hover {
+  background-color: #c0c0c0 !important;
+}
+
+/* فونت عنوان اصلی در hero section */
+.hero-title h1,
+.hero-title span {
+  font-family: "Luckiest Guy", cursive;
+}
+
+/* فونت تیتر کوچک در hero section */
+.hero-title h4 {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* فونت متن ساده در hero section */
+.hero-title p {
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+/* خط زیر عنوان در بخش about */
+#about h3 {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}
+
+/* متن توضیحات در بخش about */
+.about-description {
+  max-width: 500px;
+  line-height: 1.6; 
+  text-align: justify;
+}
+
+/* دکمه دانلود */
+.download-btn {
+  background-color: #e0e0e0 !important;              
+  transition: all 0.3s ease;
+}
+
+/* هاور روی دکمه دانلود */
+.download-btn:hover {
+  background-color: #cfcfcf !important; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* بک‌گراند کارت پروژه */
+.card-body {
+  background-color: #f5f5f5;
+}
+
+/* خط زیر عنوان پروژه‌ها */
+.project-title {
+  display: inline-block;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3px;
+}
+
+/* بک‌گراند بخش about و contact */
+#about,
+#contact {
+  background-color: #f5f5f5 !important;
+}
+
+/* بک‌گراند برای input-group */
+.input-group-text {
+  background-color: #d0d0d0 !important;
+}
+
+/* استایل برای صفحه‌های کوچک (موبایل) */
+@media(max-width: 768px){
+  /* متن بخش about */
+  .about-description,
+  .about-section {
+    line-height: 20px;
+    max-width: 380px;
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+
+  /* فاصله دادن به بخش پروژه‌ها */
+  .project-section {
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+
+  /* فاصله بخش contact از آیکن‌ها */
+  #contact {
+    padding-left: 3.5rem; 
+    padding-right: 1rem;
+  }
+  
+  /* فاصله کارت contact */
+  .contact-card {
+    margin-left: 1.1rem;
+  }
+
+  /* فاصله عنوان در بخش about */
+  .about-title {
+    margin-left: 24px;
+  }
+}
