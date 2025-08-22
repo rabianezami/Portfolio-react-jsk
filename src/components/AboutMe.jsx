@@ -51,9 +51,11 @@ export default function AboutMe() {
             {/* دکمه دانلود */}
            <div className="text-center mt-3">
               <a
-              href="#"
+              href="/Rabia-Zia-Nezami-CV.pdf"
               className="download-btn btn px-4 py-2 shadow-sm fw-bold"
               download="Rabia-Zia-Nezami-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaDownload size={15} className="me-2" /> 
               Download
