@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     hook: "Dive into Afghanistan’s rich heritage!",
-    description: "Explore Afghanistan’s cultural gems through a visually stunning website. Highlights cities’ heritage, history, and traditions with interactive galleries and a user-friendly interface. Built with semantic HTML & CSS.",
+    description: "Explore Afghanistan’s cultural gems through a visually stunning website. Highlights cities’ heritage, history, and traditions with interactive galleries and a user-friendly interface.",
     image: "./culture-cites-af.JPG",
     link: "https://rabianezami.github.io/Cultural-Cities-of-Afghanistan/"
   },
@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     hook: "Empowering students through technology!",
-    description: "A dynamic multi-page student portal showcasing profiles, courses, and contact forms. Features responsive design and seamless form validation. Built using HTML, CSS, and JavaScript.",
+    description: "A dynamic multi-page student portal showcasing profiles, courses, and contact forms. Features responsive design and seamless form validation.",
     image: "./school-portal.JPG",
     link: "https://rabianezami.github.io/School-Portal/"
   },
@@ -22,7 +22,7 @@ const projects = [
   {
     id: 3,
     hook: "Simplify your freelance workflow!",
-    description: "Efficient invoice & client management for freelancers. Add, edit, delete clients/invoices with real-time localStorage updates. Built with HTML, Bootstrap, and JavaScript for smooth workflow.",
+    description: "Efficient invoice & client management for freelancers. Add, edit, delete clients/invoices with real-time localStorage updates.",
     image: "freeLancerApp.JPG",
     link: "https://rabianezami.github.io/FreeLancerInvoceAPP/"
   }
@@ -35,7 +35,7 @@ export default function Projects() {
       <div className="container p-5">
         <div className="d-flex justify-content-center align-items-center">
           <h3 className="project-title fw-bold text-light text-center mb-4">
-            Porjects
+            My Recent Works
           </h3>
         </div>
 
@@ -58,7 +58,7 @@ export default function Projects() {
                    {/* دکمه مشاهده پروژه */}
                   <a
                     href={project.link}
-                    className="btn btn-dark w-50"
+                    className="btn btn-dark w-50 mt-2"
                     target="_blank"
                     rel="noorpener noreferrer"
                   >

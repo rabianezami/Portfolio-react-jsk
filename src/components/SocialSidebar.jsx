@@ -21,7 +21,7 @@ const SocialSidebar = forwardRef((props, ref) => {
           href={item.url}
           target="_blank"
           rel="noreferrer"
-          className="social-icon text-dark d-flex align-items-center rounded shadow-sm text-decoration-none px-2 py-2 fs-6"
+          className="social-icon text-dark d-flex align-items-center rounded shadow-sm text-decoration-none px-2 py-2 fs-5"
         >
           {item.icon} {/* نمایش آیکن شبکه اجتماعی */}
         </a>

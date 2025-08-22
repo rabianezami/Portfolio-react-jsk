@@ -1,7 +1,23 @@
 import { useState } from "react";
-import { FaUser, FaEnvelope, FaCommentDots, FaArrowRight} from "react-icons/fa";
+import { FaUser, FaEnvelope, FaCommentDots, FaArrowRight, FaMapMarkerAlt, FaPhoneAlt} from "react-icons/fa";
 import { useForm } from "@formspree/react";
-
+ 
+function InfoItem({ icon: Icon, label, value }) {
+  return (
+    <div className="d-flex align-items-center mb-3">
+      <div
+        className="d-flex justify-content-center align-items-center rounded-circle me-3"
+        style={{ width: "40px", height: "40px", backgroundColor: "#e0e0e0" }}
+      >
+        <Icon />
+      </div>
+      <div>
+        <p className="mb-0 fw-bold">{label}</p>
+        <p className="mb-0">{value}</p>
+      </div>
+    </div>
+  );
+}
 
 
 // کامپوننت فرم تماس
@@ -83,90 +99,129 @@ export default function ContactMe() {
 
   return (
     // بخش Contact
-    <section id="contact" className="d-flex flex-column justify-content-center align-items-center py-5 bg-secondary">
-      <h3 className="text-center mb-4 fw-bold">Contact Me</h3>
-      <p className="w-50 text-center">I’d love to hear from you! Whether it’s a project, a job offer, or simply a message, don’t hesitate to get in touch.</p>
+    <section
+  id="contact"
+  className="py-5 bg-secondary text-dark fs-5"
+>
+  <div className="container">
+    <div className="row">
+      
+      {/* متن سمت چپ */}
+      <div className="col-md-6 order-md-1 text-start">
+        <h3 className="fw-bold mb-3">Contact Me</h3>
+        <p className="mb-4">
+          I’d love to hear from you! Whether it’s a project, a job offer,
+          or simply a message, don’t hesitate to get in touch.
+        </p>
+        
+        <div className="mt-4">
+          <InfoItem
+            icon={FaMapMarkerAlt}
+            label="Location"
+            value="Charikar, Parwan, Afghanistan"
+          />
 
-       {/* کارت فرم */}
-      <div
-        className="card p-4 shadow-lg col-md-4 contact-card"
-        style={{
-          borderRadius: "20px",
-          background: "#0b1622",
-          color: "white",
-        }}
-      >
-       
+          <InfoItem 
+            icon={FaPhoneAlt}
+            label="Phone"
+            value="+93 748 945 001"
+          />
 
-        {/* پیام موفقیت */}
-        {successMsg && (
-          <div className="alert alert-success text-center mb-3" role="alert">
-            {successMsg}
-          </div>
-        )}
-
-         {/* فرم تماس */}
-        <form onSubmit={handleSubmit}>
-          {/* Name */}
-          <label className="mb-1">Your Name</label>
-          <div className="input-group mb-1">
-            <span className="input-group-text">
-              <FaUser />
-            </span>
-            <input
-              type="text"
-              name="name"
-              className={`form-control ${errors.name ? "is-invalid" : ""}`}
-              placeholder="Michael Jackson"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </div>
-          {errors.name && <div className="text-danger mb-2">{errors.name}</div>}
-
-          {/* Email */}
-          <label className="mt-2 mb-1">Your Email</label>
-          <div className="input-group mb-1">
-            <span className="input-group-text">
-              <FaEnvelope />
-            </span>
-            <input
-              type="text"
-              name="email"
-              className={`form-control ${errors.email ? "is-invalid" : ""}`}
-              placeholder="jackson@gmail.com"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          {errors.email && <div className="text-danger mb-2">{errors.email}</div>}
-
-          {/* Message */}
-          <label className="mt-2 mb-1">Your Message</label>
-          <div className="input-group mb-1">
-            <span className="input-group-text">
-              <FaCommentDots />
-            </span>
-             <textarea
-               name="message"
-               className={`form-control ${errors.message ? "is-invalid" : ""}`}
-               placeholder="Write me a text..."
-               rows="4"
-               value={formData.message}
-               onChange={handleChange}
-             >
-             </textarea>
-           </div>
-          {errors.message && <div className="text-danger mb-2">{errors.message}</div>}
-
-          {/* Button */}
-          <div className="d-flex justify-content-center">
-            <button type="submit" className="btn btn-light px-4 py-2 mt-3 rounded-pill fw-bold">
-              Send <FaArrowRight />
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
-    </section>
+
+      {/* فرم سمت راست */}
+      <div className="col-md-6 order-md-2">
+        <div
+          className="card p-4 shadow-lg contact-card"
+          style={{
+            borderRadius: "20px",
+            background: "#0b1622",
+            color: "white",
+          }}
+        >
+          {successMsg && (
+            <div className="alert alert-success text-center mb-3" role="alert">
+              {successMsg}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit}>
+            {/* Name */}
+            <label className="mb-1">Your Name</label>
+            <div className="input-group mb-1">
+              <span className="input-group-text">
+                <FaUser />
+              </span>
+              <input
+                type="text"
+                name="name"
+                className={`form-control ${errors.name ? "is-invalid" : ""}`}
+                placeholder="Michael Jackson"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.name && (
+              <div className="text-danger mb-2">{errors.name}</div>
+            )}
+
+            {/* Email */}
+            <label className="mt-2 mb-1">Your Email</label>
+            <div className="input-group mb-1">
+              <span className="input-group-text">
+                <FaEnvelope />
+              </span>
+              <input
+                type="text"
+                name="email"
+                className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                placeholder="jackson@gmail.com"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            {errors.email && (
+              <div className="text-danger mb-2">{errors.email}</div>
+            )}
+
+            {/* Message */}
+            <label className="mt-2 mb-1">Your Message</label>
+            <div className="input-group mb-1">
+              <span className="input-group-text">
+                <FaCommentDots />
+              </span>
+              <textarea
+                name="message"
+                className={`form-control ${
+                  errors.message ? "is-invalid" : ""
+                }`}
+                placeholder="Write me a text..."
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            {errors.message && (
+              <div className="text-danger mb-2">{errors.message}</div>
+            )}
+
+            {/* Button */}
+            <div className="d-flex justify-content-center">
+              <button
+                type="submit"
+                className="btn btn-light px-4 py-2 mt-3 rounded-pill fw-bold"
+              >
+                Send <FaArrowRight />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
   );
 }
