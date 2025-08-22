@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaEnvelope, FaCommentDots, FaArrowRight} from "react-icons/fa";
+import { useForm } from "@formspree/react";
+
 
 
 // کامپوننت فرم تماس
@@ -20,6 +22,8 @@ export default function ContactMe() {
 
   const [successMsg, setSuccessMsg] = useState(""); // پیام ارسال موفق
 
+  const [state, handleFormSubmit] = useForm("xgvzgkrq")
+  
    // تغییر مقدار فیلدها
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -62,15 +66,19 @@ export default function ContactMe() {
   };
 
     // ارسال فرم
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-    setSuccessMsg("Your message has been sent successfully!");
+    await handleFormSubmit(e)
+
+    if (state.succeeded) {
+        setSuccessMsg("Your message has been sent successfully!");
     setFormData({ name: "", email: "", message: "" });
 
     // محو شدن پیام بعد از 9 ثانیه
     setTimeout(() => setSuccessMsg(""), 9000);
+    }
   };
 
   return (

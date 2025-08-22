@@ -29,7 +29,7 @@ export default function HeroSection() {
         minHeight: `calc(100vh - ${navHeight}px)`,
         paddingLeft: "5rem", // فاصله از آیکن‌ها
         paddingRight: "1rem",
-        backgroundImage: "url('../public/hero.png')", // بک‌گراند
+        backgroundImage: "url('/hero.png')", // بک‌گراند
         backgroundSize: "cover",
         backgroundPosition: "center"
       }}
