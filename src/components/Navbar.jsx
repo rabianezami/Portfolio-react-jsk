@@ -1,31 +1,50 @@
 
-import React, { forwardRef } from "react";
-
-const Navbar = forwardRef((props, ref) => {
-   // آرایه لینک‌های منو
-  const navLinks = ["Home", "About", "Projects", "Contact"];
+import React from "react";
+import '../styles/navbar.css';
+import { FaMoon, FaSun } from "react-icons/fa";
+ 
+const Navbar = ({ darkMode, toggleDarkMode }) => {
+  const links = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
     <nav
-     ref={ref}
-     className="custom-navbar position-fixed top-0 start-50 translate-middle-x mt-3
-                py-1 px-md-3 px-1 rounded-pill"  // ثابت بالای صفحه و وسط افقی
+      className={`navbar fixed-top glass-navbar ${
+        darkMode ? "navbar-dark" : "navbar-light"
+      }`}
     >
-      <ul className="nav justify-content-center rounded-pill flex-nowrap">
-         {navLinks.map((link) => (
-          <li className="nav-item mx-2 mx-sm-1" key={link}>  {/* آیتم منو با فاصله افقی */}
-            <a 
-               className="nav-link custom-nav-link text-white px-2 fs-6 fs-md-5 fs-lg-4"
-               href={`#${link.toLowerCase()}`}
-            >
-            {link}   {/* متن لینک */}
-            </a>
-          </li>
-         ))}
-      </ul>
+      <div className="container d-flex justify-content-between align-items-center py-2">
+        {/* برند سمت چپ */}
+        <a className="navbar-brand fw-bold fs-2" href="#home">
+          Rabia
+        </a>
 
+        {/* لینک‌ها وسط (md و بالاتر) */}
+        <ul className="navbar-nav mx-auto d-none d-md-flex flex-row gap-3">
+          {links.map((l) => (
+            <li className="nav-item" key={l.name}>
+              <a className="nav-link px-3 fw-medium" href={l.href}>
+                {l.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Dark Mode toggle سمت راست */}
+        <button
+          onClick={toggleDarkMode}
+          className="theme-toggle"
+          aria-label="Toggle dark mode"
+        >
+          {darkMode ? < FaSun /> : <FaMoon /> }
+        </button>
+      </div>
     </nav>
-  )
-})
+  );
+}
 
-export default Navbar;  // صادر کردن کامپوننت برای استفاده در فایل‌های دیگر
+export default Navbar;

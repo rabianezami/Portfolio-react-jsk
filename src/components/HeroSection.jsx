@@ -1,48 +1,52 @@
-import { useState, useEffect } from "react";
+// src/components/HeroSection.jsx
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import "../styles/HeroSection.css";
 
-// کامپوننت بخش هرو (صفحه اول)
-export default function HeroSection() {
-  const [navHeight, setNavHeight] = useState(0);
+const HeroSection = () => {
+  const [quote, setQuote] = useState("");
+
+  const quotes = [
+    "Programming isn’t about what you know; it’s about what you can figure out.",
+    "Programming is not just typing code, it’s thinking in logic.",
+    "Every great programmer was once a beginner.",
+    "Code is the bridge between imagination and reality.",
+    "First, solve the problem. Then, write the code.",
+  ];
 
   useEffect(() => {
-    // پیدا کردن Navbar بر اساس کلاس یا آی‌دی
-    const navbar = document.querySelector(".navbar"); 
-    if (navbar) {
-      setNavHeight(navbar.offsetHeight);
-    }
-    
-    // اگر سایز صفحه تغییر کرد، دوباره محاسبه شود
-    const handleResize = () => {
-      if (navbar) {
-        setNavHeight(navbar.offsetHeight);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
   }, []);
 
   return (
-    <section
-      id="home"
-      className="d-flex justify-content-center align-items-center text-center text-white"
-      style={{
-        minHeight: `calc(100vh - ${navHeight}px)`,
-        paddingLeft: "5rem", // فاصله از آیکن‌ها
-        paddingRight: "1rem",
-        backgroundImage: "url('/hero.png')", // بک‌گراند
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
-    >
-      {/* متن خوش‌آمدگویی */}
-      <div className="hero-title">
-        <h1 className="display-4 display-md-1 fw-bold">Hi,</h1>
-        <h4 className="fw-bold">
-          <span className="display-6 display-md-1 fw-bold">my name is </span>
-           Rabia Zia Nezam!
-        </h4>
-        <p className="fw-bold fs-5">Fronted Developer <br /> based in Parwan, Afghanistan</p>
+    <header className="hero-section position-relative bg-lg-light">
+      <div className="bg-circle bg-1"></div>
+      <div className="bg-circle bg-2"></div>
+
+      <div className="container py-5 d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
+        {/* Text section */}
+        <div className="hero-text text-center text-lg-start mt-4  mt-lg-0">
+          <h1 className="display-3 display-lg-4 fw-bold">
+            Hi, I'm <span className="gradient-text">Rabia <br /> Zia Nezami</span>
+          </h1>
+          <h4 className="text-secondary my-5">Frontend Developer</h4>
+          <p className="quote p-3 rounded">"{quote}"</p>
+          <div className="d-flex flex-column flex-md-row gap-3 mt-4 justify-content-center justify-content-lg-start">
+            <a href="#projects" className="btn btn-primary btn-lg">View Projects</a>
+            <a href="#contact" className="btn btn-outline btn-lg">Contact Me</a>
+          </div>
+        </div>
+
+        {/* SVG / Icon section */}
+        <div className="hero-image d-flex justify-content-center mb-4 mb-lg-0">
+          <div className="profile-image d-flex align-items-center justify-content-center">
+            <FontAwesomeIcon icon={faCode} className="code-icon" />
+          </div>
+        </div>
       </div>
-    </section>
+    </header>
   );
-}
+};
+
+export default HeroSection;

@@ -1,0 +1,51 @@
+/* استایل badge های مهارت */
+
+
+#about h2 {
+     background: linear-gradient(90deg, #1C6EA4, #1DA1F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    border-bottom: 1px solid #1C6EA4;
+    padding-bottom: 2px;
+}
+
+.profile-img {
+  filter: grayscale(100%);
+}
+
+.profile-name,
+.profile-resume {
+    background: linear-gradient(90deg, #1C6EA4, #1DA1F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #1C6EA4, #33A1E0);
+    color: white;
+}
+
+/* هاور روی دکمه دانلود */
+.download-btn:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.skill-badge {
+  background: linear-gradient(135deg, #1C6EA4, #33A1E0);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* افکت hover روی badge */
+.skill-badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.3);
+}

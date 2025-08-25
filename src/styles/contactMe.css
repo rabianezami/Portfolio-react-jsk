@@ -1,0 +1,19 @@
+#contact {
+   background: linear-gradient(45deg, rgba(55, 152, 209, 0.1), rgba(99, 102, 241, 0.1));
+}
+
+.contact-heading h3 {
+     background: linear-gradient(90deg, #1C6EA4, #1DA1F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-label {
+    color: #1C6EA4;
+}
+
+
+.card-contact {
+    background: #1C6EA4;
+    color: white;
+}

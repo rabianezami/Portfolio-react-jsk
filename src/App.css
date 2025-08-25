@@ -1,49 +1,109 @@
-/* استایل برای نوار ناوبری (navbar) */
-.custom-navbar {
-  background: rgba(0, 0, 0, 0.3); 
-  backdrop-filter: blur(10px);    
-  -webkit-backdrop-filter: blur(10px); 
-  border: 2px solid rgba(255, 255, 255, 0.7);          
-  padding: 0.5rem 1.5rem;  
-  z-index: 1030;      
+/* وقتی کلاس dark روی کانتینر اصلی باشد */
+.app.dark {
+  background-color: #0f0f10 !important;  
+  color: #f5f6f7 !important;             
 }
 
-/* لینک‌های navbar */
-.nav .custom-navbar-link {
-  white-space: nowrap;
-  font-size: 0.9rem;
+/* Navbar */
+.app.dark .navbar {
+  background-color: rgba(31, 41, 55, 0.95);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* استایل آیکن‌های شبکه اجتماعی */
+/*وقتی dark فعال باشه برای بخش About*/
+.app.dark #about {
+  background-color: #121212 !important;
+  color: #ddd !important;
+}
+
+
+.app.dark .about-card {
+  background-color: #1a1b1e !important;
+  color: white !important;
+}
+
+
+/* وقتی dark فعال باشه برای بخش Projects */
+.app.dark #projects {
+  background-color: #161719 !important;
+  color: #e4e6eb !important;
+}
+
+
+.app.dark .project-card {
+  background-color: #121212;
+}
+
+.app.dark .card-text {
+  color: white !important;
+}
+
+
+/* وقتی dark فعال باشه برای بخش Contact */
+.app.dark #contact {
+  background-color: #1a1b1e !important;   /* پس‌زمینه تیره */
+  color: #f5f6f7 !important;             /* رنگ نوشته‌ها */
+}
+
+
+.app.dark footer {
+  background-color:  #121212 !important;
+}
+
+/* دکمه دارک مود */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;           
+  background-color: #1C6EA4;    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;                 
+  font-size: 1.2rem;            
+  color: #ffffff !important;               
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);        
+}
+
+
+/* شیشه‌ای */
+.glass-navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1030;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
 .social-icon {
-  background-color: #d0d0d0;
+  background: rgba(13, 110, 253, 0.1); 
 }
 
 /* هاور روی آیکن شبکه اجتماعی */
 .social-icon:hover {
-  background-color: #c0c0c0 !important;
+  background-color: #1C6EA4 !important;
+  color: white !important;
 }
+/* 
 
-/* فونت عنوان اصلی در hero section */
-.hero-title h1,
-.hero-title span {
-  font-family: "Luckiest Guy", cursive;
-}
-
-/* فونت تیتر کوچک در hero section */
-.hero-title h4 {
-  font-family: "IBM Plex Mono", monospace;
-}
-
-/* فونت متن ساده در hero section */
-.hero-title p {
-  font-family: "Archivo Narrow", sans-serif;
-}
 
 /* خط زیر عنوان در بخش about */
-#about h3 {
+#about h3, 
+.project-title,
+.contact-heading h3
+{
   display: inline-block;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #1C6EA4;
   padding-bottom: 2px;
 }
 
@@ -54,53 +114,16 @@
   text-align: justify;
 }
 
-/* دکمه دانلود */
-.download-btn {
-  background-color: #e0e0e0 !important;              
-  transition: all 0.3s ease;
-}
 
-/* هاور روی دکمه دانلود */
-.download-btn:hover {
-  background-color: #cfcfcf !important; 
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* بک‌گراند کارت پروژه */
-.card-body {
-  background-color: #f5f5f5;
-}
-
-/* خط زیر عنوان پروژه‌ها */
-.project-title {
-  display: inline-block;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 3px;
-}
-
-/* بک‌گراند بخش about و contact */
-#about,
-#contact {
-  background-color: #f5f5f5 !important;
-}
-
-/* بک‌گراند برای input-group */
-.input-group-text {
-  background-color: #d0d0d0 !important;
-}
 
 /* استایل برای صفحه‌های کوچک (موبایل) */
 @media(max-width: 768px){
-  /* متن بخش about */
-  .about-description,
-  .about-section {
-    line-height: 20px;
-    max-width: 380px;
-    padding-left: 25px;
-    padding-right: 20px;
-  }
 
+.hero-section {
+  margin-left: 3.5rem;
+}
+
+ 
   /* فاصله دادن به بخش پروژه‌ها */
   .project-section {
     padding-left: 25px;
