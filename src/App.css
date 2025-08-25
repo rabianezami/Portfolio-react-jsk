@@ -22,6 +22,11 @@
   color: white !important;
 }
 
+.app.dark .about-description {
+  color: white !important;
+
+}
+
 
 /* وقتی dark فعال باشه برای بخش Projects */
 .app.dark #projects {
@@ -45,9 +50,18 @@
   color: #f5f6f7 !important;             /* رنگ نوشته‌ها */
 }
 
+.app.dark .card-contact {
+  background-color: #121212;
+}
+
 
 .app.dark footer {
   background-color:  #121212 !important;
+}
+
+.app.dark .social-icon {
+  background-color: #121212;
+  color: #fff !important;
 }
 
 /* دکمه دارک مود */
@@ -81,7 +95,6 @@
   z-index: 1030;
   transition: background-color 0.3s ease;
 }
-
 
 
 
@@ -119,21 +132,16 @@
 /* استایل برای صفحه‌های کوچک (موبایل) */
 @media(max-width: 768px){
 
-.hero-section {
-  margin-left: 3.5rem;
+  /* فاصله دادن به بخش پروژه‌ها */
+.project-section {
+   padding-left: 25px;
+   padding-right: 20px;
 }
 
- 
-  /* فاصله دادن به بخش پروژه‌ها */
-  .project-section {
-    padding-left: 25px;
-    padding-right: 20px;
-  }
-
   /* فاصله بخش contact از آیکن‌ها */
-  #contact {
-    padding-left: 3.5rem; 
-    padding-right: 1rem;
+  #contact, #about {
+    padding-left: 4rem; 
+    padding-left: 1rem;
   }
   
   /* فاصله کارت contact */
@@ -141,8 +149,5 @@
     margin-left: 1.1rem;
   }
 
-  /* فاصله عنوان در بخش about */
-  .about-title {
-    margin-left: 24px;
-  }
+ 
 }

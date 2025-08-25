@@ -49,7 +49,7 @@ const Profile = () => {
 
         <div className="col-md-8">
           <p>It's <span className="fw-bold profile-name">{profileData.name} </span>herself!</p>
-          <p className="text-muted fs-5 mb-4">{profileData.description}</p>
+          <p className="text-muted mb-4 about-description">{profileData.description}</p>
           <p className="fw-bold mb-0 profile-resume">Wanna know more?</p>
           <p>Click on the magic button bellow - no scary thing, it's only a CV.</p>
 
