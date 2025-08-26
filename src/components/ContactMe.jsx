@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/ContactMe.css";
+import "../styles/contactMe.css";
 import { FaUser, FaEnvelope, FaCommentDots, FaArrowRight, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { useForm } from "@formspree/react";
 
