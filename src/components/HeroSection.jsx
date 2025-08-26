@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
-import "../styles/HeroSection.css";
+import "../styles/heroSection.css";
 
 const HeroSection = () => {
   const [quote, setQuote] = useState("");
