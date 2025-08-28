@@ -1,0 +1,85 @@
+/* 🎨 پس‌زمینه بخش */
+.feedback-section {
+    background: linear-gradient(45deg, rgba(55, 152, 209, 0.05), rgba(99, 102, 241, 0.05));
+}
+
+#feedback h2 {
+    background: linear-gradient(90deg, #1C6EA4, #1DA1F2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 🌟 ستاره‌های امتیاز */
+.star {
+  color: #d1d5db;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.star.active,
+.star:hover {
+  color: #fbbf24;
+  transform: scale(1.2);
+}
+
+/* ✨ دکمه Submit با گرادینت */
+.btn-gradient {
+  background: linear-gradient(135deg, #1C6EA4, #33A1E0);
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* 🏅 برچسب Featured */
+.featured-badge-feedback {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.feedback-card {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-color: #33A1E0;
+}
+
+.feedback-card.featured {
+  border: 2px solid #fbbf24;
+  background: linear-gradient(135deg, #fffbeb, #ffffff);
+}
+
+
+/* 🎉 ایموجی دکمه‌ها */
+.emoji-reactions .btn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.emoji-reactions .btn:hover {
+  transform: scale(1.1);
+  background: #1C6EA4 !important;
+ 
+}

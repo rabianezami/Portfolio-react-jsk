@@ -1,7 +1,55 @@
-/* وقتی کلاس dark روی کانتینر اصلی باشد */
+body {
+  padding-top: 60px;
+  /* background: linear-gradient(45deg, rgba(55, 152, 209, 0.05), rgba(99, 102, 241, 0.05)); */
+}
+
+/* شیشه‌ای */
+.glass-navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1030;
+  transition: background-color 0.3s ease;
+}
+
+
+.social-icon {
+  background: rgba(13, 110, 253, 0.1); 
+}
+
+/* هاور روی آیکن شبکه اجتماعی */
+.social-icon:hover {
+  background-color: #1C6EA4 !important;
+  color: white !important;
+}
+/* 
+
+
+/* خط زیر عنوان در بخش about */
+#about h3, 
+.project-title,
+.contact-heading h3,
+#feedback h2
+{
+  display: inline-block;
+  border-bottom: 1px solid #1C6EA4;
+  padding-bottom: 2px;
+}
+
+/* متن توضیحات در بخش about */
+.about-description {
+  max-width: 500px;
+  line-height: 1.6; 
+  text-align: justify;
+}
+
+
+
 .app.dark {
-  background-color: #0f0f10 !important;  
-  color: #f5f6f7 !important;             
+  background-color: #111827 !important;  
+  color: #f3f4f6 !important;             
 }
 
 /* Navbar */
@@ -10,59 +58,151 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
-/*وقتی dark فعال باشه برای بخش About*/
-.app.dark #about {
-  background-color: #121212 !important;
-  color: #ddd !important;
+/* Social Icon*/
+.app.dark .social-icon {
+  background-color: #374151;
+  color: #fff !important;
+}
+
+/* Hero Section*/
+.app.dark .btn-outline {
+  color: #c7d2fe;
+  border-color: #c7d2fe;
+}
+
+.app.dark .btn-outline:hover {
+  color: #fff !important;
+}
+
+
+.app.dark .qoute {
+  background: rgba(99, 102, 241, 0.1);
+  color: #fff;
 }
 
 
 .app.dark .about-card {
-  background-color: #1a1b1e !important;
-  color: white !important;
+  background-color: #1f2937 !important;
+ 
 }
 
 .app.dark .about-description {
-  color: white !important;
+  color: #fff !important;
 
 }
 
 
-/* وقتی dark فعال باشه برای بخش Projects */
+/* Projects */
 .app.dark #projects {
-  background-color: #161719 !important;
-  color: #e4e6eb !important;
+  background-color: #111827 !important;
+ 
 }
 
 
 .app.dark .project-card {
-  background-color: #121212;
+  background-color: #1f2937;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .app.dark .card-text {
-  color: white !important;
-}
-
-
-/* وقتی dark فعال باشه برای بخش Contact */
-.app.dark #contact {
-  background-color: #1a1b1e !important;   /* پس‌زمینه تیره */
-  color: #f5f6f7 !important;             /* رنگ نوشته‌ها */
-}
-
-.app.dark .card-contact {
-  background-color: #121212;
-}
-
-
-.app.dark footer {
-  background-color:  #121212 !important;
-}
-
-.app.dark .social-icon {
-  background-color: #121212;
   color: #fff !important;
 }
+
+
+/* Contact Me*/
+.app.dark #contact {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.07),
+    rgba(99, 102, 241, 0.01)
+  );        
+}
+
+.app.dark .card-contact  {
+  background-color: #1f2937;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .card-contact label {
+  color: #f1f1f1 !important;
+}
+
+.app.dark .card-contact input,
+.app.dark .card-contact textarea, 
+.app.dark .card-contact .input-group-text{
+  background:  #374151;
+  color: #fff;
+  border-color: #4b5563;
+  
+}
+
+.app.dark .card-contact input::placeholder,
+.app.dark .card-contact textarea::placeholder {
+  color: #bbb !important;
+}
+
+
+/* FeedbackWall*/
+.app.dark .feedback-section {
+  background: linear-gradient(
+    135deg, 
+    rgb(28, 110, 164, 0.08),
+    rgb(51, 161, 224, 0.08)
+  );
+}
+
+.app.dark .feedback-text {
+  color: #f1f1f1 !important;
+}
+
+
+.app.dark .feedback-form {
+  background: #1f2937 !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .feedback-form input,
+.app.dark .feedback-form textarea {
+  background: #374151;
+}
+
+
+.app.dark .feedback-form input::placeholder,
+.app.dark .feedback-form textarea::placeholder {
+  color: #bbb;
+}
+
+.app.dark .sort-select {
+   background: #374151;
+   color: #f1f1f1 !important;
+  
+
+}
+
+.app.dark .feedback-card {
+  background: #1f2937;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .feedback-card.featured {
+  background: linear-gradient(135deg, #78350f, #1f2937);
+  color: white;
+}
+
+.app.dark .feedback-card .text-muted {
+  color: #aaa !important;
+}
+
+.app.dark .emoji-reactions .btn {
+  background:  #374151;
+  border: 1px solid #444;
+}
+
+.app.dark footer {
+  background-color: #1f293712 !important;
+}
+
+
 
 /* دکمه دارک مود */
 .theme-toggle {
@@ -84,48 +224,6 @@
   transform: scale(1.1);        
 }
 
-
-/* شیشه‌ای */
-.glass-navbar {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  z-index: 1030;
-  transition: background-color 0.3s ease;
-}
-
-
-
-.social-icon {
-  background: rgba(13, 110, 253, 0.1); 
-}
-
-/* هاور روی آیکن شبکه اجتماعی */
-.social-icon:hover {
-  background-color: #1C6EA4 !important;
-  color: white !important;
-}
-/* 
-
-
-/* خط زیر عنوان در بخش about */
-#about h3, 
-.project-title,
-.contact-heading h3
-{
-  display: inline-block;
-  border-bottom: 1px solid #1C6EA4;
-  padding-bottom: 2px;
-}
-
-/* متن توضیحات در بخش about */
-.about-description {
-  max-width: 500px;
-  line-height: 1.6; 
-  text-align: justify;
-}
 
 
 

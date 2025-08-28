@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="bg-circle bg-1"></div>
       <div className="bg-circle bg-2"></div>
 
-      <div className="container py-5 d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
+      <div className="container py-2 d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between">
         {/* Text section */}
         <div className="hero-text text-center text-lg-start mt-4  mt-lg-0">
           <h1 className="display-3 display-lg-4 fw-bold">

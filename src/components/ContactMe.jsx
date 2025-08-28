@@ -148,7 +148,7 @@ export default function ContactMe() {
 
               <form onSubmit={handleSubmit}>
                 {/* Name */}
-                <label className="mb-1">Your Name</label>
+                <label className="mb-1 text-dark">Your Name</label>
                 <div className="input-group mb-1">
                   <span className="input-group-text ">
                     <FaUser />
@@ -167,7 +167,7 @@ export default function ContactMe() {
                 )}
 
                 {/* Email */}
-                <label className="mt-2 mb-1">Your Email</label>
+                <label className="mt-2 mb-1 text-dark">Your Email</label>
                 <div className="input-group mb-1">
                   <span className="input-group-text">
                     <FaEnvelope />
@@ -186,7 +186,7 @@ export default function ContactMe() {
                 )}
 
                 {/* Message */}
-                <label className="mt-2 mb-1">Your Message</label>
+                <label className="mt-2 mb-1 text-dark">Your Message</label>
                 <div className="input-group mb-1">
                   <span className="input-group-text">
                     <FaCommentDots />
@@ -209,7 +209,7 @@ export default function ContactMe() {
                 <div className="d-flex justify-content-center">
                   <button
                     type="submit"
-                    className="btn btn-light px-4 py-2 mt-3 rounded-pill fw-bold"
+                    className="btn-send px-5 py-2 mt-3 rounded-pill fw-bold"
                   >
                     Send <FaArrowRight />
                   </button>

@@ -1,14 +1,15 @@
 
 import React from "react";
+import { NavLink } from "react-router-dom"
 import '../styles/navbar.css';
 import { FaMoon, FaSun } from "react-icons/fa";
  
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const links = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -19,17 +20,22 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     >
       <div className="container d-flex justify-content-between align-items-center py-2">
         {/* برند سمت چپ */}
-        <a className="navbar-brand fw-bold fs-2" href="#home">
+        <NavLink to="/" className="navbar-brand fw-bold fs-2">
           Rabia
-        </a>
+        </NavLink>
 
         {/* لینک‌ها وسط (md و بالاتر) */}
-        <ul className="navbar-nav mx-auto d-none d-md-flex flex-row gap-3">
+         <ul className="navbar-nav mx-auto d-none d-md-flex flex-row gap-3">
           {links.map((l) => (
             <li className="nav-item" key={l.name}>
-              <a className="nav-link px-3 fw-medium" href={l.href}>
+              <NavLink
+                to={l.path}
+                className={({ isActive }) =>
+                  "nav-link px-3 fw-medium" + (isActive ? " active" : "")
+                }
+              >
                 {l.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>
