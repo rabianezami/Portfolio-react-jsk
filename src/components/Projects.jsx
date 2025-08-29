@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/project.css";
 
 const Projects = () => {
@@ -32,11 +32,22 @@ const Projects = () => {
     },
   ];
 
+  const allSkills = ["All", ...new set(projects.flatMap((p) => p.techStack))];
+
+  const [selectedSkill, setSelectedSkill] = useState("All");
+
+  const filteredProjects = 
+    selectedSkill === "All"
+    ? projects
+    : projects.filter((p) = p.techStack.includes(selectedSkill));
+
   return (
     <section id="projects" className="p-5 bg-light">
       <div className="container">
         <div className="text-center">
           <h2 className="project-heading text-center mb-4 fw-bold">My Recent Works</h2>
+          <p className="fs-5 text-dark">Here are some of my recent works. Each project reflects my passion for
+          clean design and efficient code.</p>
         </div>
 
         <div className="row g-4">
