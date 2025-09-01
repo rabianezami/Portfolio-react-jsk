@@ -30,28 +30,44 @@ const Projects = () => {
       liveUrl: "https://rabianezami.github.io/Cultural-Cities-of-Afghanistan/",
       imageUrl: "/culture-cites-af.JPG",
     },
+
   ];
 
-  const allSkills = ["All", ...new set(projects.flatMap((p) => p.techStack))];
+  const allSkills = ["All", ...new Set(projects.flatMap((p) => p.techStack))];
 
   const [selectedSkill, setSelectedSkill] = useState("All");
 
   const filteredProjects = 
     selectedSkill === "All"
     ? projects
-    : projects.filter((p) = p.techStack.includes(selectedSkill));
+    : projects.filter((p) => p.techStack.includes(selectedSkill));
 
   return (
+    
     <section id="projects" className="p-5 bg-light">
       <div className="container">
-        <div className="text-center">
-          <h2 className="project-heading text-center mb-4 fw-bold">My Recent Works</h2>
-          <p className="fs-5 text-dark">Here are some of my recent works. Each project reflects my passion for
-          clean design and efficient code.</p>
+        <div className="text-center text-lg-start">
+          <h2 className="project-title text-center mb-4 fw-bold">My Recent Works</h2>
+          <p className="fs-5 text-dark">Here’s a look at my recent projects — crafted with care and clean code.</p>
+        </div>
+        
+        <div className="d-flex flex-wrap justify-content-lg-start justify-content-center gap-2 mb-5">
+          {allSkills.map((skill) => (
+            <button 
+              key={skill}
+              className={`btn btn-sm ${
+                selectedSkill === skill ? "btn-primary"  : "btn-outline-secondary"
+              }`}
+              onClick={() => setSelectedSkill(skill)}
+              >
+                {skill}
+              </button>
+          ))}
         </div>
 
+
         <div className="row g-4">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <div className="col-12 col-md-6 col-lg-4" key={project.id}>
               <div className="card h-100 shadow-sm project-card">
                 <div className="project-img-wrapper">
@@ -63,7 +79,7 @@ const Projects = () => {
                 </div>
 
                 <div className="card-body d-flex flex-column">
-                  <h5 className="card-title">{project.name}</h5>
+                  <h5 className="card-title fw-bold">{project.name}</h5>
                   <p className="card-text text-muted">{project.description}</p>
 
                   {/* تکنالوژی‌ها */}

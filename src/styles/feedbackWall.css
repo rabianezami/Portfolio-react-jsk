@@ -1,12 +1,6 @@
-/* 🎨 پس‌زمینه بخش */
-.feedback-section {
-    background: linear-gradient(45deg, rgba(55, 152, 209, 0.05), rgba(99, 102, 241, 0.05));
-}
 
-#feedback h2 {
-    background: linear-gradient(90deg, #1C6EA4, #1DA1F2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.feedback-section {
+    background: linear-gradient(45deg, rgba(74, 160, 209, 0.05), rgba(30, 31, 77, 0.05));
 }
 
 /* 🌟 ستاره‌های امتیاز */
@@ -60,26 +54,41 @@
 .feedback-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-color: #33A1E0;
+  border-left-color: #1C6EA4;
 }
 
 .feedback-card.featured {
-  border: 2px solid #fbbf24;
+  border-left: 2px solid #fbbf24;
   background: linear-gradient(135deg, #fffbeb, #ffffff);
 }
 
 
-/* 🎉 ایموجی دکمه‌ها */
-.emoji-reactions .btn {
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.2s ease;
+button.liked {
+  background-color: #e0f0ff;
+  transition: all 0.3s ease;
 }
-.emoji-reactions .btn:hover {
+
+button.hearted {
+  background-color: #ffe0e0;
+  transition: all 0.3s ease;
+}
+
+button.liked:hover, button.hearted:hover {
   transform: scale(1.1);
-  background: #1C6EA4 !important;
- 
 }
+
+.icon-btn {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+.icon-btn:focus,
+.icon-btn:active {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+

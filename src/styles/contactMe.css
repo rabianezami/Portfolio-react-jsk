@@ -1,25 +1,46 @@
-#contact {
-    background: linear-gradient(45deg, rgba(55, 152, 209, 0.05), rgba(99, 102, 241, 0.05));
+
+.contact-section {
+   background: linear-gradient(
+    135deg,
+    rgba(135, 94, 230, 0.07),
+    rgba(15, 19, 250, 0.07)
+  );
 }
 
-.contact-heading h3 {
-     background: linear-gradient(90deg, #1C6EA4, #1DA1F2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.btn-gradient {
+  background: linear-gradient(135deg, #1C6EA4, #33A1E0);
+  color: white;
+  border: none;
 }
 
-.contact-label {
+.preview-content {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #1C6EA4;
+}
+
+.live-preview-title,
+.live-preview-icon {
     color: #1C6EA4;
+   
 }
 
-
-.card-contact {
-    background: white;
+.message-preview {
+  border: 1px dashed #d1d5db;
+  min-height: 100px;
+  font-style: italic;
+  background: #f9fafb;
+  border-radius: 10px;
 }
 
-.btn-send {
-   background: linear-gradient(135deg, #1C6EA4, #33A1E0);
-   color: white;
-   border: none;
-
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(13, 110, 253, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+

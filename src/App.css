@@ -28,13 +28,13 @@ body {
 
 
 /* خط زیر عنوان در بخش about */
-#about h3, 
+.about-title, 
 .project-title,
-.contact-heading h3,
-#feedback h2
+.contact-title,
+.feedback-title
 {
   display: inline-block;
-  border-bottom: 1px solid #1C6EA4;
+  border-bottom: 1px solid #111827;
   padding-bottom: 2px;
 }
 
@@ -83,19 +83,16 @@ body {
 
 .app.dark .about-card {
   background-color: #1f2937 !important;
- 
 }
 
 .app.dark .about-description {
   color: #fff !important;
-
 }
 
 
 /* Projects */
 .app.dark #projects {
   background-color: #111827 !important;
- 
 }
 
 
@@ -118,27 +115,41 @@ body {
   );        
 }
 
-.app.dark .card-contact  {
-  background-color: #1f2937;
+.app.dark .contact-form  {
+  background-color: #1f2937 !important;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.app.dark .card-contact label {
+.app.dark .contact-form label {
   color: #f1f1f1 !important;
 }
 
-.app.dark .card-contact input,
-.app.dark .card-contact textarea, 
-.app.dark .card-contact .input-group-text{
+.app.dark .contact-form input,
+.app.dark .contact-form textarea, 
+.app.dark .contact-form .input-group-text{
   background:  #374151;
   color: #fff;
   border-color: #4b5563;
   
 }
 
-.app.dark .card-contact input::placeholder,
-.app.dark .card-contact textarea::placeholder {
+.app.dark .contact-form input::placeholder,
+.app.dark .contact-form textarea::placeholder {
   color: #bbb !important;
+}
+
+.app.dark .live-preview {
+  background: #1f2937 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app.dark .preview-content {
+  background: #374151 !important;
+}
+
+.app.dark .message-preview {
+  background: #4b5563;
+  border-color: #6b7280 !important;
 }
 
 
@@ -175,7 +186,6 @@ body {
 .app.dark .sort-select {
    background: #374151;
    color: #f1f1f1 !important;
-  
 
 }
 
@@ -185,7 +195,7 @@ body {
 }
 
 .app.dark .feedback-card.featured {
-  background: linear-gradient(135deg, #78350f, #1f2937);
+  background: linear-gradient(135deg, #ad6d47, #1f2937);
   color: white;
 }
 

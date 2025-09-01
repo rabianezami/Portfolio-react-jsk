@@ -13,11 +13,15 @@ import Projects from './components/Projects';
 import ContactMe from './components/ContactMe';
 import FeedbackWall from './components/FeedbackWall';
 import Footer from "./components/Footer";
+import NotificationModal from './components/NotificationModal';
 
 
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+    
 
   const toggleDarkMode = () => setDarkMode(prev => !prev);
   // ایجاد ref برای Navbar و SocialSidebar
@@ -39,6 +43,11 @@ function App() {
   }, []);
 
 
+    const handleFormSubmit = (message) => {
+    setModalMessage(message);
+    setShowModal(true);
+    setTimeout(() => setShowModal(false), 5000);
+  };
 
   return (
    <Router>
@@ -56,7 +65,7 @@ function App() {
               <HeroSection />
               <AboutMe />
               <Projects />
-              <ContactMe />
+              <ContactMe onSubmit={handleFormSubmit} />
               <FeedbackWall />
             </>
            }
@@ -64,10 +73,19 @@ function App() {
           
         <Route path="/about" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />}/>
-        <Route path="/contact" element={<ContactMe />} />
+        <Route path="/contact" element={<ContactMe onSubmit={handleFormSubmit} />} />
       </Routes>
+      
+       <Footer />
 
-      <Footer />
+      {showModal && (
+        <NotificationModal 
+          show={showModal}
+          message={modalMessage}
+          onClose={() => setShowModal(false)}
+        />
+
+      )}
     </div>
    </Router>
   );
