@@ -26,7 +26,7 @@ const Profile = () => {
   };
 
   return (
-    <section id="about" className="container my-5">
+    <section id="about" className="container aboutme my-5">
       <div className="text-center text-lg-start mb-3">
         <h2 className="about-title text-center fw-bold">
         {profileData.title}

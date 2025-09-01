@@ -283,7 +283,7 @@ const FeedbackWall = () => {
           </div>
 
           {/* Comment */}
-          <div className="mt-3">
+          <div className="mt-3 feedback-comment">
             <label htmlFor="comment" className="form-label fw-bold">
               Your Feedback
             </label>

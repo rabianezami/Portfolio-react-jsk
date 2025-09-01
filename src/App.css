@@ -234,28 +234,40 @@ body {
   transform: scale(1.1);        
 }
 
-
-
-
-/* استایل برای صفحه‌های کوچک (موبایل) */
-@media(max-width: 768px){
-
-  /* فاصله دادن به بخش پروژه‌ها */
-.project-section {
-   padding-left: 25px;
-   padding-right: 20px;
-}
-
-  /* فاصله بخش contact از آیکن‌ها */
-  #contact, #about {
+@media(max-width: 999px) {
+   #about {
     padding-left: 4rem; 
     padding-left: 1rem;
   }
-  
-  /* فاصله کارت contact */
-  .contact-card {
-    margin-left: 1.1rem;
+  .aboutme,
+  .project-section .container,
+  .contact-form,
+  .live-preview,
+  .feedback-section .container,
+  .hero-text {
+    max-width: 540px;
+    margin: 0 auto;
+ 
   }
+}
 
+
+/* استایل برای صفحه‌های کوچک (موبایل) */
+@media(max-width: 650px){
+
+  #about {
+    padding-left: 4rem; 
+    padding-left: 1rem;
+  }
+  .aboutme,
+  .project-section .container,
+  .contact-form,
+  .live-preview,
+  .feedback-section .container,
+  .hero-text {
+    max-width: 250px;
+    margin: 0 auto;
+ 
+  }
  
 }

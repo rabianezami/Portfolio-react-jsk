@@ -44,7 +44,7 @@ const Projects = () => {
 
   return (
     
-    <section id="projects" className="p-5 bg-light">
+    <section id="projects" className="project-section p-5 bg-light">
       <div className="container">
         <div className="text-center text-lg-start">
           <h2 className="project-title text-center mb-4 fw-bold">My Recent Works</h2>
