@@ -419,7 +419,7 @@ const FeedbackWall = () => {
           <div className="text-center mt-4">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="btn btn-outline-secondary"
+              className="btn btn-gradient"
             >
               {showAll ? "Show Less" : "Show More"}
             </button>

@@ -21,6 +21,7 @@ const Profile = () => {
       "Bootstrap",
       "CSS3",
       "HTML5",
+      "Git/GitHub"
     ],
     image: "/Rabia-Nezami.JPG",
   };

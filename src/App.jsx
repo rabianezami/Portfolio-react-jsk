@@ -56,8 +56,9 @@ function App() {
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <SocialSidebar ref={socialRef} />
   
-      {/* مسیرها */}
+     
       <Routes>
+        {/* Home page */}
         <Route 
            path="/"
            element={
@@ -70,10 +71,28 @@ function App() {
             </>
            }
         />
-          
-        <Route path="/about" element={<AboutMe />} />
-        <Route path="/projects" element={<Projects />}/>
-        <Route path="/contact" element={<ContactMe onSubmit={handleFormSubmit} />} />
+
+        {/* About page */}
+        <Route 
+            path="/about"
+            element={
+              <AboutMe />
+            } 
+          />
+
+        {/* Projects page */}
+        <Route
+            path="/projects" 
+            element={
+              <>
+                <Projects />
+                <FeedbackWall />
+              </>
+             }
+          />
+        <Route
+            path="/contact"
+            element={<ContactMe onSubmit={handleFormSubmit} />} />
       </Routes>
       
        <Footer />

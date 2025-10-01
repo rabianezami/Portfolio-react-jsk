@@ -19,7 +19,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         darkMode ? "navbar-dark" : "navbar-light"
       }`}
     >
-      <div className="container d-flex justify-content-between align-items-center py-2">
+      <div className="container d-flex justify-content-between align-items-center">
         {/* برند سمت چپ */}
         <NavLink to="/" className="navbar-brand fw-bold fs-2">
           Rabia
