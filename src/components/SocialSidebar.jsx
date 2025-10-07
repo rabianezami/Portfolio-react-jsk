@@ -4,9 +4,9 @@ import { FaGithub, FaEnvelope, FaLinkedin, FaTwitter } from "react-icons/fa";
 const SocialSidebar = forwardRef((props, ref) => {
    // آرایه شبکه‌های اجتماعی و لینک‌های مربوطه
   const socials = [
-    { icon: <FaGithub />, url: "https://github.com/rabia-nezami" },
+    { icon: <FaGithub />, url: "https://github.com/rabianezami" },
     { icon: <FaEnvelope />, url: "mailto:rabianezami786@gmail.com" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/feed/" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/rabia-zia-nezami-993989379/" },
     { icon: <FaTwitter />, url: "https://x.com/zia95355" }
   ];
 
