@@ -8,33 +8,34 @@ const Projects = () => {
       name: "Freelance Invoice App",
       description:
         "Manage clients and invoices with ease. Add, edit, and store records instantly using localStorage.",
-      techStack: ["JavaScript", "HTML", "Bootstrap"],
+      techStack: ["HTML", "Bootstrap", "JavaScript"] ,
       liveUrl: "https://rabianezami.github.io/FreeLancerInvoceAPP/",
       imageUrl: "/freeLancerApp.JPG",
     },
     {
       id: 2,
-      name: "School Portal",
+      name: "Sada – Women’s Digital Safety",
       description:
-         "Showcasing Afghan cities with heritage, history, and traditions. Includes interactive galleries and clean design.",
-      techStack: ["JavaScript", "Bootstrap", "HTML"],
-      liveUrl: "https://rabianezami.github.io/School-Portal/",
-      imageUrl: "/school-portal.JPG",
+         "A team project about raising awareness and protecting women's digital security.",
+      techStack: ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js", "Express", "MongoDB"],
+      liveUrl: "https://cyber-experts-web.onrender.com/",
+      imageUrl: "/seda-app.JPG",
     },
     {
       id: 3,
-      name: "Afghanistan Culture Cites",
+      name: "Online Shopping",
+      techStack: ["HTML", "Bootstrap", "JavaScript"] ,
       description:
-       "A showcase of Afghan cities highlighting heritage, history, and traditions with clean, interactive design.",
-      techStack: ["JavaScript", "HTML", "CSS"],
-      liveUrl: "https://rabianezami.github.io/Cultural-Cities-of-Afghanistan/",
-      imageUrl: "/culture-cites-af.JPG",
+       "modern online store where users can explore products, add or remove items from their cart, and manage everything seamlessly with localStorage.",
+      liveUrl: "https://online-shopping-new.vercel.app/login.html",
+      imageUrl: "/online-shopping.JPG",
     },
 
   ];
 
+ 
   const allSkills = ["All", ...new Set(projects.flatMap((p) => p.techStack))];
-
+console.log(allSkills);
   const [selectedSkill, setSelectedSkill] = useState("All");
 
   const filteredProjects = 
