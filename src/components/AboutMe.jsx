@@ -19,6 +19,7 @@ const Profile = () => {
       "JavaScript",
       "API",
       "Bootstrap",
+      "Taiwind CSS",
       "CSS3",
       "HTML5",
       "Git/GitHub"
@@ -56,7 +57,7 @@ const Profile = () => {
 
           <div className="mt-3">
             <a 
-              href="/Rabia-Zia-Nezami-CV.pdf"
+              href="/Rabia-Nezami.JPG"
               className="btn px-4 py-2 mb-4 shadow-sm fw-bold download-btn"
               target="blank"
               rel="noorpener noreferrer"
