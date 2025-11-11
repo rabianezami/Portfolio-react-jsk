@@ -8,7 +8,7 @@ const Projects = () => {
       name: "Freelance Invoice App",
       description:
         "Manage clients and invoices with ease. Add, edit, and store records instantly using localStorage.",
-      techStack: ["HTML", "Bootstrap", "JavaScript"] ,
+      techStack: ["JavaScript",  "Bootstrap", "HTML"] ,
       liveUrl: "https://rabianezami.github.io/FreeLancerInvoceAPP/",
       imageUrl: "/freeLancerApp.JPG",
     },
@@ -17,19 +17,46 @@ const Projects = () => {
       name: "Sada – Women’s Digital Safety",
       description:
          "A team project about raising awareness and protecting women's digital security.",
-      techStack: ["HTML", "CSS", "Bootstrap", "JavaScript", "Node.js", "Express", "MongoDB"],
+      techStack: ["Next.js", "Node.js", "Express", "MongoDB", "Bootstrap", "HTML", "CSS"],
       liveUrl: "https://cyber-experts-web.onrender.com/",
       imageUrl: "/seda-app.JPG",
     },
     {
       id: 3,
-      name: "Online Shopping",
-      techStack: ["HTML", "Bootstrap", "JavaScript"] ,
+      name: "E-commarce-APP",
+      techStack: ["React", "Node.js", "AI", "Bootstrap", "HTML", "CSS"] ,
       description:
        "modern online store where users can explore products, add or remove items from their cart, and manage everything seamlessly with localStorage.",
-      liveUrl: "https://online-shopping-new.vercel.app/login.html",
-      imageUrl: "/online-shopping.JPG",
+      liveUrl: "https://e-commarce-website-phi.vercel.app/",
+      imageUrl: "/online-shop.JPG",
     },
+     {
+      id: 4,
+      name: "AI-Translation-App",
+      techStack: ["React", "Node.js", "AI", "Bootstrap", "HTML",] ,
+      description:
+       "Translate text instantly with smart AI. Type, submit, and get accurate translations in seconds.",
+      liveUrl: "https://ai-translation-app-beta.vercel.app/",
+      imageUrl: "/AI-translation.JPG",
+    },
+     {
+      id: 5,
+      name: "School-Portal ",
+      techStack: ["JavaScript", "Bootstrap", "HTML" ] ,
+      description:
+       "A mini school portal showcasing pages for students, courses, and contact — built to practice web interactivity.",
+      liveUrl: "https://rabianezami.github.io/School-Portal/",
+      imageUrl: "/school-portal.JPG",
+    },
+     {
+      id: 6,
+      name: "RoshanAI",
+      techStack: ["Bootstrap", "HTML", "CSS", ] ,
+      description:
+       "Empowering Afghan learners. RoshanAI makes studying easier, faster, and more interactive — anytime, anywhere.",
+      liveUrl: "https://rabianezami.github.io/RoshanAI/",
+      imageUrl: "/roshanAI.JPG",
+    }
 
   ];
 
