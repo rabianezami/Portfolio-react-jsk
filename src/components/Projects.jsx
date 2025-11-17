@@ -14,9 +14,9 @@ const Projects = () => {
     },
     {
       id: 2,
-      name: "Sada – Women’s Digital Safety",
+      name: "Hackathon-Seda app",
       description:
-         "A team project about raising awareness and protecting women's digital security.",
+         "A team project focused on Digital Safety for Afghan women.",
       techStack: ["Next.js", "Node.js", "Express", "MongoDB", "Bootstrap", "HTML", "CSS"],
       liveUrl: "https://cyber-experts-web.onrender.com/",
       imageUrl: "/seda-app.JPG",
@@ -41,12 +41,12 @@ const Projects = () => {
     },
      {
       id: 5,
-      name: "School-Portal ",
-      techStack: ["JavaScript", "Bootstrap", "HTML" ] ,
+      name: "PopChoice – AI Movie Recommendation App ",
+      techStack: ["React", "Node.js", "AI", "Supabase", "Sql", "Bootstrap", "HTML" ] ,
       description:
-       "A mini school portal showcasing pages for students, courses, and contact — built to practice web interactivity.",
-      liveUrl: "https://rabianezami.github.io/School-Portal/",
-      imageUrl: "/school-portal.JPG",
+       "Find your next movie with AI. Answer a few questions and get personalized recommendations instantly.",
+      liveUrl: "https://ai-move-recomondation-app.vercel.app/",
+      imageUrl: "/ai-movie.JPG",
     },
      {
       id: 6,
