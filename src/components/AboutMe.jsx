@@ -58,7 +58,7 @@ const Profile = () => {
 
           <div className="mt-3">
             <a 
-              href="/Rabia-Nezami.JPG"
+              href="/Rabia-Nezami cv.pdf"
               className="btn px-4 py-2 mb-4 shadow-sm fw-bold download-btn"
               target="blank"
               rel="noorpener noreferrer"
