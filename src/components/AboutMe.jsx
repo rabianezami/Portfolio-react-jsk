@@ -16,13 +16,14 @@ const Profile = () => {
      and letting my sharp little mastermind brain find clever solutions.`,
     skills: [
       "React",
-      "JavaScript",
-      "API",
-      "Bootstrap",
+      "AI",
+      "JavaScript(Es6)",
       "Taiwind CSS",
+      "Bootstrap",
       "CSS3",
       "HTML5",
-      "Git/GitHub"
+      "Git/GitHub",
+      "Figma"
     ],
     image: "/Rabia-Nezami.JPG",
   };
