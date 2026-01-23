@@ -23,7 +23,10 @@ const Profile = () => {
       "CSS3",
       "HTML5",
       "Git/GitHub",
-      "Figma"
+      "Figma",
+      "Canva",
+      "CapCut",
+      "InShot"
     ],
     image: "/Rabia-Nezami.JPG",
   };
