@@ -17,6 +17,7 @@ const Profile = () => {
     skills: [
       "React",
       "AI",
+      "Redux",
       "JavaScript(Es6)",
       "Taiwind CSS",
       "Bootstrap",
@@ -24,7 +25,7 @@ const Profile = () => {
       "HTML5",
       "Git/GitHub",
       "Figma",
-      "Canva",
+      "Material UI",
       "CapCut",
       "InShot"
     ],
