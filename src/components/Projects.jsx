@@ -50,12 +50,12 @@ const Projects = () => {
     },
      {
       id: 6,
-      name: "RoshanAI",
-      techStack: ["Bootstrap", "HTML", "CSS", ] ,
+      name: "Bazaar-e-Noor",
+      techStack: ["React", "Redux Toolkit", "Tailwindcss", ] ,
       description:
-       "Empowering Afghan learners. RoshanAI makes studying easier, faster, and more interactive — anytime, anywhere.",
-      liveUrl: "https://rabianezami.github.io/RoshanAI/",
-      imageUrl: "/roshanAI.JPG",
+       "A modern Afghan-inspired marketplace experience, built with React, Redux Toolkit, and Tailwind CSS. Browse products with fast search, filters, sorting, and a smooth cart drawer.",
+      liveUrl: "https://rabianezami.github.io/bazzar-e-noor-application/",
+      imageUrl: "/bazaar-e-noor.JPG",
     }
 
   ];
